@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Button from "./components/Button";
+import Display from "./components/Display";
 
 const App = () => {
+  const [displayValue, setDisplayValue] = useState(0);
+
   return (
     <View style={style.container}>
+      <Display value={displayValue}/>
       <View style={style.buttons}>
         <Button label="AC" />
         <Button label="/" />
@@ -33,8 +37,8 @@ const style = StyleSheet.create({
     flex: 1,
   },
   buttons: {
-    flexDirection: 'row',
-    flexWrap: 'wrap'
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
 });
 
