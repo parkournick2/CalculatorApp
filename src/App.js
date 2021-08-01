@@ -1,25 +1,41 @@
 import React from "react";
-import { StyleSheet, Text, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import Button from "./components/Button";
 
 const App = () => {
   return (
-    <SafeAreaView style={style.MainContainer}>
-      <Text style={style.Title}>Hello World</Text>
-    </SafeAreaView>
+    <View style={style.container}>
+      <View style={style.buttons}>
+        <Button label="AC" />
+        <Button label="/" />
+        <Button label="7" />
+        <Button label="8" />
+        <Button label="9" />
+        <Button label="*" />
+        <Button label="4" />
+        <Button label="5" />
+        <Button label="6" />
+        <Button label="-" />
+        <Button label="1" />
+        <Button label="2" />
+        <Button label="3" />
+        <Button label="+" />
+        <Button label="0" />
+        <Button label="." />
+        <Button label="=" />
+      </View>
+    </View>
   );
 };
 
 const style = StyleSheet.create({
-  MainContainer: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexGrow: 1,
-    backgroundColor: "#6495ED",
+  container: {
+    flex: 1,
   },
-  Title: {
-    fontSize: 30,
-  }
+  buttons: {
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
 });
 
 export default App;
